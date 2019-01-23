@@ -1,4 +1,4 @@
-function [ ] = threeBodySun(  )
+function [ ] = threeBodySun()
 %Simulates the movement of the eart, moon and sun through solving the
 %three-body-problem.
 
@@ -36,7 +36,7 @@ xVelSun= 0;                %Index No.6 in Array y of the solution
 yPosEarth= 0;              %Index No.7 in Array y of the solution
 yVelEarth= 29780;          %Index No.8 in Array y of the solution
 yPosMoon= 0;               %Index No.9 in Array y of the solution
-yVelMoon= 29780+1023;      %Index No.10 in Array y of the solution
+yVelMoon= 29780+1024;      %Index No.10 in Array y of the solution
 yPosSun= 0;                %Index No.11 in Array y of the solution
 yVelSun= 0;                %Index No.12 in Array y of the solution
 
@@ -92,7 +92,7 @@ out=['The moon has orbited the earth ', num2str(count), ' times!'];
 text(0.25*10^11,0.25*10^11,out);
 
 %Animation of the movement of the planets
-dothdl=plot([xPosEarth,xPosMoon,xPosSun],[yPosEarth,yPosMoon,yPosSun],'o');
+dothdl=plot([xPosEarth,xPosMoon,xPosSun],[yPosEarth,yPosMoon,yPosSun],'O');
 animationTime=tic;
 for i=1:size(t,1)
     %Paints the position of the planets at the point of time t(i)
